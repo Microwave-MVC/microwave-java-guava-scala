@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.name = "microwave-jvm-box"
     vb.gui = true
-    vb.memory = "2048"
+    vb.memory = "4096"
     vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxvga"]
   end
 
@@ -24,9 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "shell" do |s|
-    # s.inline = "sudo apt-get update"
-    # s.inline = "sudo apt-get -y upgrade && sudo apt-get -y autoremove"
-    # s.inline = "sudo apt-get install -y ubuntu-desktop"
+    s.inline = "sudo apt-get install -y ubuntu-desktop"
   end
 
 end

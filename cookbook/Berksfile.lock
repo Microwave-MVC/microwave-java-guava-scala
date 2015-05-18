@@ -11,6 +11,7 @@ GRAPH
     java (>= 0.0.0)
   java (1.31.0)
   microwave-jvm-chef (1.0.0)
+    apt (~> 2.7.0)
     idea (~> 0.2.1)
     java (~> 1.31.0)
     postgresql (= 3.4.18)

@@ -1,3 +1,4 @@
+include_recipe 'apt::default'
 include_recipe 'java::default'
 # include_recipe 'scala::default'
 # include_recipe 'groovy::default'

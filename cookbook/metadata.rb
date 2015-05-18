@@ -1,6 +1,7 @@
 version '1.0.0'
 name    'microwave-jvm-chef'
 
+depends 'apt', '~> 2.7.0'
 depends 'java', '~> 1.31.0'
 # depends 'scala', '~> 2.1.0'
 # depends 'groovy', '~> 0.0.1'
