@@ -19,3 +19,8 @@ end
 describe command('java -version') do
   its(:stdout) { should match '1.7.0_75' }
 end
+
+# Postgres
+describe service('postgresql') do
+  it { should be_running }
+end
