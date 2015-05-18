@@ -1,0 +1,32 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/trusty64"
+
+  config.vm.synced_folder "./", "/home/vagrant/microwave-workspace"
+  
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+  
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "microwave-jvm-box"
+    vb.gui = true
+    vb.memory = "2048"
+    vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxvga"]
+  end
+
+  config.berkshelf.berksfile_path = "../cookbook/Berksfile"
+  config.berkshelf.enabled = true
+  
+  config.vm.provision "chef_solo" do |chef|
+    chef.cookbooks_path = "../cookbook"
+    chef.run_list = ['microwave-jvm-chef']
+  end
+
+  config.vm.provision "shell" do |s|
+    # s.inline = "sudo apt-get update"
+    # s.inline = "sudo apt-get -y upgrade && sudo apt-get -y autoremove"
+    # s.inline = "sudo apt-get install -y ubuntu-desktop"
+  end
+
+end

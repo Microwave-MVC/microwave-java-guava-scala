@@ -1,0 +1,9 @@
+DEPENDENCIES
+  microwave-jvm-chef
+    path: .
+    metadata: true
+
+GRAPH
+  java (1.31.0)
+  microwave-jvm-chef (1.0.0)
+    java (~> 1.31.0)

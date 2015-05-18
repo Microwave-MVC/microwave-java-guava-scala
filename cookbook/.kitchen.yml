@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+  synced_folders: 
+    - ["../workspace", "/home/vagrant/microwave-workspace"]
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: microwave-jvm-box
+    driver:
+      box: ubuntu/trusty64
+
+suites:
+  - name: microwave-jvm-chef
+    run_list: 
+      - microwave-jvm-chef
