@@ -24,3 +24,8 @@ end
 describe service('postgresql') do
   it { should be_running }
 end
+
+# IntelliJ IDEA
+describe command('ls | grep idea') do
+  its(:stdout) { should match 'idea-IC-14.1.1' }
+end
