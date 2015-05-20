@@ -14,7 +14,7 @@ Microwave MVC provides basic, cross-platform-compatible templates for different 
 * ChefDK
 
 ## 1-Minute JVM Environment
-    $ vagrant install plugin vagrant-berkshelf
+    $ vagrant plugin install vagrant-berkshelf
     $ cd workspace
     $ vagrant up                          # provisions the box for the first time
     $ vagrant halt && vagrant destroy     # this will allow ubuntu-desktop to load
