@@ -1,11 +1,11 @@
 # microwave-jvm
-Microwave MVC provides basic, cross-platform-compatible templates for different tech stacks so you can quickly get started with web development.
+Microwave MVC provides cross-platform-compatible templates for different tech stacks so you can quickly get started with web development.
 
 #### What you get out of this Microwave
 * Java 7
 * IntelliJ IDEA Community Edition
 * Postgres
-* Ubuntu 14.04 Vagrant Box
+* Ubuntu 14.04 Vagrant Box in GUI mode!
 * provisioned using Chef / Test Kitchen / Berkshelf
 
 #### Dependencies
@@ -17,7 +17,7 @@ Microwave MVC provides basic, cross-platform-compatible templates for different 
     $ vagrant plugin install vagrant-berkshelf
     $ cd workspace
     $ vagrant up                          # provisions the box for the first time
-    $ vagrant halt && vagrant destroy     # this will allow ubuntu-desktop to load
+    $ vagrant halt && vagrant up          # this will allow ubuntu-desktop to load
     * Log in with user vagrant and password vagrant
     * Open terminal inside ubuntu
     $ idea-IC-14.1.1/bin/idea.sh 
